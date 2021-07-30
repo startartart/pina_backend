@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/address.css">
+    <title>set address</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<!-- Header -->
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+</header>
+<body>
+    <div class="address_title">
+        <h3>지번, 도로명, 건물명을 입력하세요</h3>
+    </div>
+    <div class="set_address">
+        <input type="search" class="search_address" placeholder="예) 용동로45">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="current_location">
+        <button type="submit" class="current_location_btn" onclick="location.href='/address/map'">
+            <i class="fas fa-search-location"></i>
+            <span class="sunflower">현 위치로 주소 설정</span>
+        </button>
+    </div>
+    <div class="lately_address">
+        <h4>최근 주소</h4>
+    </div>
+    <div class="test">
+        <a onclick="location.href='/'"><input type="search" placeholder="testtestteset"></a>
+    </div>
+</body>

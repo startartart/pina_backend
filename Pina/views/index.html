@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slide.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/slide.js"></script>
+    <title>Floword</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <!-- <i class="fas fa-seedling"></i>
+            <span class="title">floword</span> -->
+            <img src="/image/logo.png" class="logo_img">
+        </div>
+        <div class="address">
+            <button onclick="location.href='/address'"><i class="fas fa-map-marker-alt"></i><span>주소를 입력해주세요</span></button>
+        </div>
+        <div class="basket">
+            <button><i class="fas fa-shopping-basket"></i></button>
+        </div>
+    </header>
+    <!-- advertising photo -->
+    <section class="advertising">
+    <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+            <img src="/image/핑크튤립.png" />
+            </div>
+            <div class="slide">
+            <img src="/image/프리지아.png" />
+            </div>
+            <div class="slide">
+            <img src="/image/투톤튤립.png" />
+            </div>
+            <div class="slide">
+            <img src="/image/핑크튤립.png" />
+            </div>
+            <!--slide images end-->
+            
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+            <label for="radio1" class="manual-btn" onclick="label_click(1);"></label>
+            <label for="radio2" class="manual-btn" onclick="label_click(2);"></label>
+            <label for="radio3" class="manual-btn" onclick="label_click(3);"></label>
+            <label for="radio4" class="manual-btn" onclick="label_click(4);"></label>
+            </div>
+            <!--manual navigation end-->
+            <!-- search bar above photo -->
+            <div class="search_bar">
+               <button class="search_btn sunflower" onclick="location.href='/search'">
+                    <i class="fas fa-search"></i>검색어를 입력하세요
+                </button>
+            </div>
+        </div>
+      </div>
+      <!--image slider end-->
+    </section>
+    <!-- category -->
+    <section class="category">
+        <div class="category_title">
+            <h3>상황별 카테고리</h3>
+        </div>
+        <div class="category_icons">
+            <li>
+                <button class="category1"></button><span class="info">어버이날</span>
+            </li>
+            <li>
+                <button class="category2"></button><span class="info">졸업식</span>
+            </li>
+            <li>
+                <button class="category3"></button><span class="info">기념일</span>
+            </li>
+        </div>
+        <div class="category_icons">
+            <li>
+                <button class="category4"></button><span class="info">발렌타인데이</span>
+            </li>
+            <li>
+                <button class="category5"></button><span class="info">화이트데이</span>
+            </li>
+            <li>
+                <button class="category6"></button><span class="info">생일</span>
+            </li>
+        </div>
+        <div class="category_icons">
+            <li>
+                <button class="category7"></button><span class="info">로즈데이</span>
+            </li>
+            <li>
+                <button class="category8"></button><span class="info">크리스마스</span>
+            </li>
+            <li>
+                <button class="category9"></button><span class="info">성년의날</span>
+            </li>
+        </div>
+    </section>
+    <!-- keword -->
+    <section class="keyword">
+        <h3>연령별 인기있는 키워드</h3>
+        <div class="age">
+            <li><button><span>10대</span></button></li>
+            <li><button><span>20대</span></button></li>
+            <li><button><span>30대</span></button></li>
+            <li><button><span>40대</span></button></li>
+        </div>
+        <div class="product">
+            <button class="btn" onclick="changePhoto(0)"><i class="fas fa-chevron-left"></i></button>
+            <div>
+                <div><img src="/image/프리지아.png" id="keyword_product"/></div>
+                <div class="txt_keword"><span>키워드</span></div>   
+            </div>
+            <button class="btn" onclick="changePhoto(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+            
+    </section>
+    <!-- bottom menu -->
+    <section class="bottom_menu">
+        <li>
+            <button onclick="location.href='/'" class="bottom_btn">
+                <i class="fas fa-home"></i>
+                <p class="sunflower bottom_txt">홈</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/search'">
+                <i class="fas fa-search"></i>
+                <p class="sunflower bottom_txt">검색</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/all_product'">
+                <i class="fas fa-th-large"></i>
+                <p class="sunflower bottom_txt">모아보기</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/all_market'">
+                <i class="fas fa-store-alt"></i>
+                <p class="sunflower bottom_txt">마켓</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/mypage'">
+                <i class="fas fa-user"></i>
+                <p class="sunflower bottom_txt">정보</p>
+            </button>
+        </li>
+    </section>
+</body>
+</html>

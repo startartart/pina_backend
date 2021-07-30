@@ -1,0 +1,61 @@
+/* category */
+.classification {
+  padding: var(--padding);
+}
+
+.classification .classification_icons {
+  display: flex;
+  font-size: var(--font-medium);
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.classification .classification_icons button {
+  display: flex;
+  padding: var(--padding);
+  border: 1px solid var(--grey-light-color);
+  border-radius: 50%;
+  margin-bottom: var(--padding);
+  width: 80px;
+  height: 80px;
+}
+
+/* .category .category_icons category1 {
+    background: url("/image/성년의날.png") no-repeat;
+    width: 200px;
+  } */
+
+.classification .classification_icons li {
+  text-align: center;
+  padding: var(--padding);
+}
+
+.classification1 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}
+
+.classification2 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}
+
+.classification3 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}
+
+.classification4 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}
+
+.classification5 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}
+
+.classification6 {
+  background: url("/image/Carnation.png") no-repeat;
+  background-size: cover;
+}

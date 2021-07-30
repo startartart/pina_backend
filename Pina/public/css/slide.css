@@ -1,0 +1,132 @@
+:root {
+  /* Color */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --puple-light-color: #ebd6ff;
+  --puple-dark-color: #9200e0;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+  --gray-light-light-color: #f4f4f4;
+
+  /* Size */
+  --padding: 12px;
+  --icon_padding: 5px;
+  --icon-size: 50px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+/* advertising photo */
+
+.advertising {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* .advertising {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+} */
+
+/* .advertising img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: 92.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  /* border: 1px solid var(--puple-light-color); */
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  background-color: var(--grey-light-color);
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio1:checked ~ .navigation-manual .manual-btn[for="radio1"] {
+  background: var(--white-color);
+}
+
+#radio2:checked ~ .navigation-manual .manual-btn[for="radio2"] {
+  background: var(--white-color);
+}
+
+#radio3:checked ~ .navigation-manual .manual-btn[for="radio3"] {
+  background: var(--white-color);
+}
+
+#radio4:checked ~ .navigation-manual .manual-btn[for="radio4"] {
+  background: var(--white-color);
+}

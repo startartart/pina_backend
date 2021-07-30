@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Floword</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+    
+</head>
+<!-- Header -->
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+</header>
+<!-- 개인정보 임시 html .. 회원가입창 접속용-->
+<body>
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-4 card-panel">
+          <form class="login-form">
+            <div class="row">
+              <div class="input-field col s12 center">
+                <!-- <img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login"/> -->
+                <p class="center login-form-text">LOGIN</p>
+              </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s12">
+                <!-- <i class="mdi-social-person-outline prefix"></i> -->
+                <i class="material-icons prefix">account_circle</i>
+                <input id="username" name="username" type="text" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;"/>
+                <label for="username" data-error="wrong" class="center-align" data-success="right">Username</label>            
+              </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s12">
+                <!-- <i class="mdi-action-lock-outline prefix"></i> -->
+                <i class="material-icons prefix">vpn_key</i>
+                <input id="password" name="password" type="password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);"/>
+                <label for="password">Password</label>
+              </div>
+            </div>
+            
+            <div class="row">          
+              <div class="input-field col s12 login-text">               
+              <input type="checkbox" id="test6" checked="checked" />
+              <label for="test6" class="pointer-events">Remember me</label>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <button type="submit" class="btn waves-effect waves-light col s12">Login</button>
+              </div>
+              <div class="input-field col s12">
+                <a href="/fblogin" class="btn waves-effect waves-light col s12 light-blue darken-4">FACEBOOK Login</a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s6 m6 l6">
+                <p class="margin medium-small"><a href="/register">Register Now!</a></p>
+              </div>
+              <div class="input-field col s6 m6 l6">
+                  <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+              </div>          
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+
+<!-- bottom menu -->
+<section class="bottom_menu">
+    <li>
+        <button onclick="location.href='/'">
+            <i class="fas fa-home"></i>
+            <p class="sunflower bottom_txt">홈</p>
+        </button>
+    </li>
+    <li>
+        <button onclick="location.href='/search'">
+            <i class="fas fa-search"></i>
+            <p class="sunflower bottom_txt">검색</p>
+        </button>
+    </li>
+    <li>
+        <button onclick="location.href='/all_product'">
+            <i class="fas fa-th-large"></i>
+            <p class="sunflower bottom_txt">모아보기</p>
+        </button>
+    </li>
+    <li>
+        <button onclick="location.href='/all_market'">
+            <i class="fas fa-store-alt"></i>
+            <p class="sunflower bottom_txt">마켓</p>
+        </button>
+    </li>
+    <li>
+        <button onclick="location.href='/mypage'" class="bottom_btn">
+            <i class="fas fa-user"></i>
+            <p class="sunflower bottom_txt">정보</p>
+        </button>
+    </li>
+</section>
+<body>

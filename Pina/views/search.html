@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <title>search</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<!-- Header -->
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+</header>
+<body> 
+    <div class="search_keyword">
+        <input type="search" class="search_input" placeholder="검색어를 입력하세요" autofocus>
+        <button onclick="location.href='search_result.html'"><i class="fas fa-search"></i></button>
+    </div>
+    <!-- bottom menu -->
+    <section class="bottom_menu">
+        <li>
+            <button onclick="location.href='/'">
+                <i class="fas fa-home"></i>
+                <p class="sunflower bottom_txt">홈</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/search'" class="bottom_btn">
+                <i class="fas fa-search"></i>
+                <p class="sunflower bottom_txt">검색</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/all_product'">
+                <i class="fas fa-th-large"></i>
+                <p class="sunflower bottom_txt">모아보기</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/all_market'">
+                <i class="fas fa-store-alt"></i>
+                <p class="sunflower bottom_txt">마켓</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/mypage'">
+                <i class="fas fa-user"></i>
+                <p class="sunflower bottom_txt">정보</p>
+            </button>
+        </li>
+    </section>
+</body>
