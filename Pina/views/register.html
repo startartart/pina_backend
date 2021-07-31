@@ -11,25 +11,23 @@
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
   <section>
     <h1>회원가입 페이지</h1>
   </section>
-  
   <section>
-    <form name="login" method="post">
+    <form name="login" action='/register' method="post">
       아이디확인<br>
       <input type="text" name="user_ID" placeholder="아이디 입력" >
       <input type="button" name="user_IDcheck" value="아이디 확인">
       <br>
       비밀번호<br> 
       <input type="password" name="user_PW1" value="123456"><br>
-      비밀번호 재확인<br> 
+      비밀번호 재확인<br>
       <input type="password" name="user_PW2" value="123456">
       <input type="button" name="user_PWcheck" value="비밀번호 재확인">
       <br><br>
       이름<br>  <input type="text" name="user_name" value=""> <br>
-      생년월일<br> 
+      생년월일<br>
       <select name="year">
         <option value="">-- 선택 --</option>
         <option value="1995">1995</option>
@@ -89,28 +87,28 @@
         <option value="31">31</option>
       </select>
       <br><br>
-      성별<br>  
+      성별<br>
       <label for="man">남자</label>
-      <input type="radio" name="gender" value="m" id="man">
+      <input type="radio" name="gender" value="1" id="1">
       <label for="woman">여자</label>
-      <input type="radio" name="gender" value="m" id="woman"> <br><br>
+      <input type="radio" name="gender" value="2" id="2"> <br><br>
       이메일<br><input type="email" name="user_email" placeholder="email@gmail.com"><br><br>
-      휴대전화<br>  
+      휴대전화<br>
       <input type="text" name="user_phone" placeholder="010-****-****">
       <input type="button" name="certification" value="인증번호 받기"><br>
       <input type="text" name="certification" placeholder="인증번호를 입력하세요">
       <input type="button" name="certification" value="확인"><br><br>
-      관심사<br> 
+      관심사<br>
       IT<input type="checkbox" name="check" value="hobby1">
       보안<input type="checkbox" name="check" value="hobby2">
       웹<input type="checkbox" name="check" value="hobby3">
       서버<input type="checkbox" name="check" value="hobby4">
       <br><br>
-      성별<br>  
-      <label for="man">사용자</label>
-      <input type="radio" name="sellbuy" value="n" id="seller">
+      사용자<br>
+      <label for="man">구매자</label>
+      <input type="radio" name="sellbuy" value="1" id="1">
       <label for="woman">판매자</label>
-      <input type="radio" name="sellbuy" value="n" id="buyer">
+      <input type="radio" name="sellbuy" value="2" id="2">
       <br><br>
       본인 사진 <br>
       <input type="file" name="" value="">

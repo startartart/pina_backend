@@ -2,13 +2,14 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var app = express();
+var connection = require('../config');
 
 var users = require('./users');
 router.use('/users', users);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log("query")
+  
   res.render('index.html', { title: 'Express' });
 });
 
@@ -42,7 +43,36 @@ router.get('/mypage', function(req,res,next){
 
 router.get('/register', function(req,res,next){
   res.render('register');
-  
 });
 
+router.post('/register',function(req,res){
+  var id = req.body.user_ID;
+  var pw = req.body.user_PW1;
+  var name = req.body.user_name;
+  var age = 23;
+  var adr1 = 1;
+  var adr2 = 2;
+  var adr3 = 3;
+  var sellbuy = req.body.sellbuy;
+  var gender = req.body.gender;
+  var phonenum = req.body.user_phone;
+  var email = req.body.user_email;
+  var date = new Date().toISOString().slice(0, 10);
+  console.log(gender);
+  console.log(sellbuy);
+
+  var sql = `INSERT INTO privacy (user_id, user_pwd, user_name, user_age, user_adr1, user_adr2, user_adr3, user_sellbuy, user_phonenum, user_gender, user_email, user_date)
+   VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
+   var params = [id, pw, name, age, adr1, adr2, adr3, sellbuy, phonenum, gender, email, date];
+
+   connection.query(sql, params, function(err, rows, fields) {
+     if(err)
+      console.log(err);
+     else {
+      console.log(rows);
+      res.send('회원가입 완료');
+      }
+   })
+});
+  
 module.exports = router;

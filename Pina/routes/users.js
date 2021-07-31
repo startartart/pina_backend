@@ -7,7 +7,7 @@ var db = require("../db");
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 }); */
-
+/*
 router.get("/", (req, res) => {
   // db select문 수행
   db((err, connection) => {
@@ -21,5 +21,5 @@ router.get("/", (req, res) => {
     });
   });
 });
-
+*/
 module.exports = router;

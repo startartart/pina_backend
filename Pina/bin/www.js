@@ -89,23 +89,3 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-var mysql      = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '0000',
-  database : 'pina_db',
-  connectionLimit : 10
-});
-
-connection.connect();
-  
-connection.query('SELECT * FROM privacy', function (error, results, fields) {
-    if (error) {
-        console.log(error);
-    }
-    console.log(results);
-});
-  
-connection.end();
