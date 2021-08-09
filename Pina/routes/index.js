@@ -3,6 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 var app = express();
 var connection = require('../config');
+const Search = require('../models/search');
 
 var users = require('./users');
 router.use('/users', users);
@@ -18,7 +19,19 @@ router.get('/address', function(req,res,next){
 });
 
 router.get('/search', function(req,res,next){
-  res.render('../views/search');
+  res.render('search');
+});
+
+router.post('/search', function(req,res){
+  var word = req.body.des;
+  const result = Search.create({
+    id: word,
+    search_result: word
+  });
+});
+
+router.get('/search_result', function(req,res,next){
+  res.render('search_result');
 });
 
 router.get('/address/map', function(req,res,next){
@@ -58,8 +71,6 @@ router.post('/register',function(req,res){
   var phonenum = req.body.user_phone;
   var email = req.body.user_email;
   var date = new Date().toISOString().slice(0, 10);
-  console.log(gender);
-  console.log(sellbuy);
 
   var sql = `INSERT INTO privacy (user_id, user_pwd, user_name, user_age, user_adr1, user_adr2, user_adr3, user_sellbuy, user_phonenum, user_gender, user_email, user_date)
    VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
