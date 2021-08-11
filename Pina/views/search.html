@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/css/search.css">
     <title>search</title>
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/search.js"></script>
 </head>
 <!-- Header -->
 <header>
@@ -18,10 +20,10 @@
     </div>
 </header>
 <body> 
-    <form method="post">
+    <form method="post" id="search_form">
     <div class="search_keyword">
-        <input type="text" name = 'des' class="search_input" placeholder="검색어를 입력하세요" autofocus >
-        <button onclick="location.href='search_result.html'"><i class="fas fa-search"></i></button>
+        <input type="text" id ="word" class="search_input" placeholder="검색어를 입력하세요" autofocus >
+        <button type="submit"><i class="fas fa-search"></i></button>
     </form>
     </div>
     <!-- bottom menu -->

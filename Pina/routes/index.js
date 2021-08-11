@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 var app = express();
 var connection = require('../config');
-const Search = require('../models/search');
+var Search = require('../models/search');
 
 var users = require('./users');
 router.use('/users', users);
@@ -19,9 +19,19 @@ router.get('/address', function(req,res,next){
 });
 
 router.get('/search', function(req,res,next){
-  res.render('search');
+  res.render('search.html');
 });
 
+router.post('/search', async (req, res ,next) => {
+
+  console.log(req.body);
+  const result = await Search.create({
+      id: req.body.des,
+      search_result: req.body.des
+  });
+  console.log(result);
+})
+/*
 router.post('/search', function(req,res){
   var word = req.body.des;
   const result = Search.create({
@@ -29,6 +39,7 @@ router.post('/search', function(req,res){
     search_result: word
   });
 });
+*/
 
 router.get('/search_result', function(req,res,next){
   res.render('search_result');
