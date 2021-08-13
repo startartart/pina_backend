@@ -1,8 +1,7 @@
 const Sequelize = require('sequelize');
 
-module.exports = class Search extends Sequelize.Model {
-  static init(sequelize)
-  {
+class Search extends Sequelize.Model {
+  static init(sequelize) {
     return super.init({
       id: {
         type: Sequelize.STRING(30),    // type : 자료형
@@ -28,4 +27,7 @@ module.exports = class Search extends Sequelize.Model {
       collate: 'utf8_general_ci',
     });
   }
+  static associate(db) {}
 };
+
+module.exports = Search;

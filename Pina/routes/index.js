@@ -4,7 +4,6 @@ var fs = require('fs');
 var app = express();
 var connection = require('../config');
 var Search = require('../models/search');
-
 var users = require('./users');
 router.use('/users', users);
 
@@ -19,27 +18,16 @@ router.get('/address', function(req,res,next){
 });
 
 router.get('/search', function(req,res,next){
-  res.render('search.html');
+  res.render('search');
 });
 
-router.post('/search', async (req, res ,next) => {
-
-  console.log(req.body);
-  const result = await Search.create({
-      id: req.body.des,
-      search_result: req.body.des
-  });
-  console.log(result);
+router.post('/search', function(req,res,next){
+  var search_word = req.body.des;
+  Search.create({
+    id: search_word,
+    search_result: search_word
+  })
 })
-/*
-router.post('/search', function(req,res){
-  var word = req.body.des;
-  const result = Search.create({
-    id: word,
-    search_result: word
-  });
-});
-*/
 
 router.get('/search_result', function(req,res,next){
   res.render('search_result');
