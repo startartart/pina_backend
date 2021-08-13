@@ -16,8 +16,9 @@ db.Comment = require('./comment')(sequelize, Sequelize);
 db.Address = require('./address')(sequelize, Sequelize);
 db.Mypage = require('./mypage')(sequelize, Sequelize);
 
-Search.init(sequelize);
 db.Search = Search;
+Search.init(sequelize);
+Search.associate(db);
 
 
 module.exports = db;  // 모듈화
