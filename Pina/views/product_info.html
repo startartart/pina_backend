@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/product_info.css">
+    <title>Floword</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="prev_btn">
+            <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+        </div>
+        <div class="title">상품정보</div>
+        <div class="empty"></div>
+    </header>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/image/프리지아.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="/image/프리지아.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="/image/프리지아.png">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/product_info.js"></script>
+    <section class="product_info">
+        <div class="product_title">상품명 : 프리지아 꽃</div>
+        <div class="product_price">가격 : 20,000원</div>
+        <div class="product_delivery">배달비: 3,000원</div>
+    </section>
+    <section class="product_bar">
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper2">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="product_word2 padding">
+                        "당신의 새 출발을 응원합니다"<br><br>
+                        프리지아의 꽃말입니다.<br><br>
+                        <img src="/image/프리지아.png"><br><br>
+                        상품 사이즈<br><br>
+                        가로: 20cm<br><br>
+                        세로: 50cm<br><br>
+                    </p>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        var bullet = ['상품정보', '마켓정보', '리뷰']
+        var swiper = new Swiper(".mySwiper2", {
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + 
+                        '"<span>' + (bullet[index]) + '</span></div>';
+            }
+            }
+        });
+        </script>
+    </section>
+    <!-- bottom basket menu -->
+    <section class="bottom_menu_basket">
+        <div class="go_buy">
+            <button id="toastButton" class="sunflower">
+                장바구니
+            </button>
+            <div id="toast">장바구니에 상품을 담았습니다!</div>
+            <script>
+                const toast = document.getElementById('toast');  // id가 toast인 요소 div
+                let isToastShown = false;
+                // id가 toastButton인 요소를 클릭하면 아래 함수가 호출됨
+                document.getElementById('toastButton').addEventListener('click', function () {
+                    if (isToastShown) return;   // 토스트 메시지가 띄어져 있다면 함수를 끝냄
+                    isToastShown = true;
+                    toast.classList.add('show');    // show라는 클래스를 추가해서 토스트 메시지를 띄우는 애니메이션을 발동시킴
+                    setTimeout(function () {
+                        // 2700ms 후에 show 클래스를 제거함
+                        toast.classList.remove('show');
+                        isToastShown = false;
+                    }, 2700);
+                });
+          </script>
+        </div>
+    </section>
+</body>

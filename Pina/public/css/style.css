@@ -8,6 +8,8 @@
   --grey-dark-color: #909090;
   --grey-light-color: #e0e0e0;
   --gray-light-light-color: #f4f4f4;
+  --concept-dark-color: #fa4270;
+  --concept-light-color: #f7a7bb;
 
   /* Size */
   --padding: 12px;
@@ -29,11 +31,24 @@
 
 body {
   font-family: Sunflower;
-  padding-bottom: 105px;
+  padding-bottom: 110px;
 }
 
+/* Font */
 .sunflower {
   font-family: Sunflower;
+}
+
+.padding {
+  padding: var(--padding);
+}
+
+.padding_top {
+  padding-top: var(--padding);
+}
+
+.flex {
+  display: flex;
 }
 
 ul,
@@ -49,8 +64,22 @@ button:focus {
   background-color: white;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 input {
   outline: none;
+}
+
+.empty {
+  width: 10.63px;
+}
+
+.title {
+  font-family: none;
+  font-weight: bold;
 }
 
 /* Header */
@@ -62,12 +91,12 @@ header {
 }
 
 header .logo_img {
-  height: 2rem;
+  height: 1.5rem;
   vertical-align: middle;
 }
 
 header .address button {
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   padding: var(--icon_padding);
   font-family: Sunflower;
 }
@@ -85,19 +114,67 @@ header .logo .title {
 } */
 
 header i {
-  font-size: var(--font-large);
+  font-size: 17px;
+  color: var(--grey-dark-color);
 }
 
 header .address i {
   padding-right: var(--padding);
+  color: var(--concept-light-color);
 }
 
 header .basket {
-  padding-left: 35px;
+  padding-left: 25px;
 }
 
 header .basket button {
   padding: var(--icon_padding);
+}
+
+/* slide */
+
+.advertising {
+  position: relative;
+  display: inline-block;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  outline: none;
+  width: 10px;
+  height: 10px;
 }
 
 /* search bar */
@@ -105,13 +182,16 @@ header .basket button {
 .search_bar {
   position: absolute;
   display: flex;
-  margin-top: 30%;
   width: 100%;
+  top: 30%;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  z-index: 2;
 }
 
 .search_btn {
+  display: inline-block;
   border-radius: 9999px;
   padding: 10px 70px;
   box-shadow: 1px 1px 6px var(--grey-dark-color);
@@ -120,7 +200,7 @@ header .basket button {
 
 .search_bar i {
   padding-right: var(--padding);
-  color: var(--puple-light-color);
+  color: var(--concept-light-color);
   font-size: var(--font-medium);
   vertical-align: middle;
 }
@@ -128,7 +208,7 @@ header .basket button {
 /* category */
 .category {
   padding: var(--padding);
-  border-bottom: 1px solid var(--grey-light-color);
+  border-bottom: 10px solid var(--gray-light-light-color);
 }
 
 .category .category_icons {
@@ -224,33 +304,25 @@ header .basket button {
   font-size: var(--font-medium);
 }
 
-.keyword .product {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  text-align: center;
-  margin: 0px auto;
-  justify-content: center;
-}
-
-.keyword .product img {
+.keyword .swiper-slide img {
   width: 100%;
-  height: auto;
+  padding: 0px 50px var(--padding) 50px;
 }
 
-.keyword .product .btn {
-  padding: var(--padding);
-  font-size: large;
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--grey-dark-color);
+  --swiper-navigation-size: 20px;
 }
 
-.keyword .txt_keword {
-  text-align: center;
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  border: none;
+  outline: none;
 }
 
 /* bottom menu */
 .bottom_menu {
-  /* position: sticky;
-  bottom: 0; */
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -260,6 +332,7 @@ header .basket button {
   padding-bottom: 35px;
   background-color: var(--white-color);
   border-top: 1px solid var(--grey-light-color);
+  z-index: 5;
 }
 
 .bottom_menu button {
@@ -278,7 +351,7 @@ header .basket button {
 }
 
 .bottom_menu .bottom_btn > i {
-  color: var(--lilac-color);
+  color: var(--concept-dark-color);
 }
 
 .bottom_menu .bottom_btn > p {

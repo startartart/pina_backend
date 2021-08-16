@@ -10,22 +10,22 @@
     <link rel="stylesheet" href="/css/search.css">
     <title>search</title>
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/js/search.js"></script>
 </head>
 <!-- Header -->
 <header>
     <div class="prev_btn">
         <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
     </div>
-</header>
-<body> 
-    <form method="post" id="search_form">
+
+    <form action='/search_result' method="post">
     <div class="search_keyword">
-        <input type="text" name = 'des' class="search_input" placeholder="검색어를 입력하세요" autofocus >
-        <button onclick="location.href='search_result.html'"><i class="fas fa-search"></i></button>
+        <input type="search" name = 'des' class="search_input" placeholder="검색어를 입력하세요" autofocus >
+        <button onclick="location.href='/search_result'"><i class="fas fa-search"></i></button>
     </form>
     </div>
+    <div></div>
+</header>
+<body>
     <!-- bottom menu -->
     <section class="bottom_menu">
         <li>

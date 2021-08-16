@@ -13,41 +13,45 @@
 
 .search_keyword {
   display: flex;
-  padding: var(--padding);
+  /* padding: var(--padding); */
   align-items: center;
 }
 
 .search_keyword i {
   padding: var(--icon_padding);
   font-size: var(--font-large);
+  color: var(--concept-light-color);
 }
 
 .search_input {
-  width: calc(100% - 3rem);
+  /* width: calc(100% - 3rem); */
   font-size: 0.875rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   border-radius: 9999px;
   background-color: var(--gray-light-light-color);
   border: 0px;
-  padding-left: 10px;
+  margin-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.related_search {
+  padding-bottom: 0px;
+}
+
+.related_search a {
+  color: var(--concept-dark-color);
   margin-right: var(--padding);
 }
 
-.search_product {
+.filter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.search_product button {
-  border: 1px solid var(--gray-light-light-color);
-  box-shadow: 1px 1px 10px var(--gray-light-light-color);
-  border-radius: 20%;
-  margin-bottom: var(--padding);
-}
-
-.search_product button img {
-  width: 70%;
-  border-radius: 10%;
-  margin-bottom: var(--padding);
+.filter button {
+  background-color: var(--concept-light-color);
+  border-radius: 999px;
+  color: white;
+  margin-right: var(--padding);
+  padding: 3px var(--padding);
+  font-size: var(--font-medium);
 }

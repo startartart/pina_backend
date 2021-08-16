@@ -6,49 +6,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="../css/products.css">
-    <title>search</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <title>Floword</title>
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
 </head>
-<!-- Header -->
-<header>
-    <div class="prev_btn">
-        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
-    </div>
-    <form action='/search_result' method="post">
-    <div class="search_keyword">
-        <input type="search" name="des" class="search_input" placeholder="검색어를 입력하세요">
-        <button onclick="location.href='/search_result'"><i class="fas fa-search"></i></button>
-    </form>
-    </div>
-    <div></div>
-</header>
 <body>
-    <section class="related_search padding">
-        <a class="related_search_txt">#시작</a>
-        <a class="related_search_txt">#입학식</a>
-        <a class="related_search_txt">#졸업식</a>
-        <a class="related_search_txt">#인생출발</a>
+    <!-- Header -->
+    <header>
+        <div class="prev_btn">
+            <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </header>
+    <!-- top menu -->
+    <section class="top_menu padding">
+        <li>
+            <button class="top_txt1">
+                <p class="sunflower">전체</p>
+            </button>
+        </li>
+        <li>
+            <button class="top_txt">
+                <p class="sunflower">꽃다발</p>
+            </button>
+        </li>
+        <li>
+            <button class="top_txt">
+                <p class="sunflower">미니화분</p>
+            </button>
+        </li>
+        <li>
+            <button class="top_txt">
+                <p class="sunflower">홈데코</p>
+            </button>
+        </li>
     </section>
-    <section class="filter padding">
-        <li><button><span>낮은 가격순</span></button></li>
-        <li><button><span>거리순</span></button></li>
-        <li><button><span>판매량순</span></button></li>
-        <li><button><span>평점순</span></button></li>
-    </section>
+    <!-- products -->
     <section class="products">
         <!-- <div class="box_product"> -->
             <button onclick="location.href='/product_info'" class="box_product2">
-                <div><img src="../image/프리지아.png"></div>
+                <div><img src="/image/프리지아.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
                 <div class="products_price">20,000원</div>
             </button>
             <button class="box_product2">
-                <div><img src="../image/핑크튤립.png"></div>
+                <div><img src="/image/핑크튤립.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
@@ -57,28 +61,28 @@
         <!-- </div> -->
         <!-- <div class="box_product"> -->
             <button class="box_product2">
-                <div><img src="../image/투톤튤립.png"></div>
+                <div><img src="/image/투톤튤립.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
                 <div class="products_price">20,000원</div>
             </button>
             <button class="box_product2">
-                <div><img src="../image/프리지아.png"></div>
+                <div><img src="/image/프리지아.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
                 <div class="products_price">20,000원</div>
             </button>
             <button class="box_product2">
-                <div><img src="../image/핑크튤립.png"></div>
+                <div><img src="/image/핑크튤립.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
                 <div class="products_price">20,000원</div>
             </button>
             <button class="box_product2">
-                <div><img src="../image/투톤튤립.png"></div>
+                <div><img src="/image/투톤튤립.png"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market">마켓이름</div>
                 <div class="products_info">상품한줄소개상품한줄소개</div>
@@ -95,13 +99,13 @@
             </button>
         </li>
         <li>
-            <button onclick="location.href='/search'" class="bottom_btn">
+            <button onclick="location.href='/search'">
                 <i class="fas fa-search"></i>
                 <p class="sunflower bottom_txt">검색</p>
             </button>
         </li>
         <li>
-            <button onclick="location.href='/products'">
+            <button onclick="location.href='/all_product'" class="bottom_btn">
                 <i class="fas fa-th-large"></i>
                 <p class="sunflower bottom_txt">모아보기</p>
             </button>
@@ -113,7 +117,7 @@
             </button>
         </li>
         <li>
-            <button>
+            <button onclick="location.href='/mypage'">
                 <i class="fas fa-user"></i>
                 <p class="sunflower bottom_txt">정보</p>
             </button>

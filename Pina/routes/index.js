@@ -1,3 +1,4 @@
+const { resolveSoa } = require('dns');
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
@@ -10,7 +11,7 @@ router.use('/users', users);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   
-  res.render('index.html', { title: 'Express' });
+  res.render('index', { title: 'Express' });
 });
 
 router.get('/address', function(req,res,next){
@@ -21,15 +22,16 @@ router.get('/search', function(req,res,next){
   res.render('search');
 });
 
-router.post('/search', function(req,res,next){
+router.get('/search_result', function(req,res,next){
+  res.render('search_result');
+});
+
+router.post('/search_result', function(req,res,next){
   var search_word = req.body.des;
   Search.create({
     id: search_word,
     search_result: search_word
   })
-})
-
-router.get('/search_result', function(req,res,next){
   res.render('search_result');
 });
 
@@ -47,6 +49,14 @@ router.get('/all_market', function(req,res,next){
 
 router.get('/all_product', function(req,res,next){
   res.render('all_product');
+});
+
+router.get('/products', function(req,res,next){
+  res.render('products');
+});
+
+router.get('/product_info', function(req,res,next){
+  res.render('product_info');
 });
 
 router.get('/mypage', function(req,res,next){
