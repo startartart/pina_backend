@@ -60,7 +60,17 @@ router.get('/product_info', function(req,res,next){
 });
 
 router.get('/mypage', function(req,res,next){
-  res.render('mypage');
+ 
+  //세션정보는 req.session 에 들어 있다
+  if (req.user)       //세션에 유저가 있다면
+  {
+    res.render('all_product');
+  }
+  else
+  {
+    res.redirect('/users/login');
+
+  }
 });
 
 router.get('/register', function(req,res,next){
