@@ -7,10 +7,10 @@ var parseurl = require('parseurl')
 var session = require('express-session')
 var FileStore = require('session-file-store')(session);
 const bodyParser = require('body-parser');
-var { sequelize} = require('./models');
+var models = require('./models');
 var app = express();
 var flash = require('connect-flash');
-sequelize.sync();
+models.sequelize.sync();
 
 // view engine setup
 app.engine('html',require('ejs').renderFile);

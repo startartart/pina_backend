@@ -14,6 +14,7 @@ module.exports = function(passport){
     if(fmsg.error){
       feedback = fmsg.error[0];
     }
+
     if (req.user)       
     {
       res.send('이미 로그인 하셨네요');
@@ -32,7 +33,6 @@ module.exports = function(passport){
     });
   });
   
-  /*
   router.post('/login_process', function(req,res,next){
     var post = req.body;
     var email = post.email;
@@ -49,13 +49,12 @@ module.exports = function(passport){
     }
   
   });
-  */
   
   router.post('/login_process',
     passport.authenticate('local', {
       failureRedirect: '/users/login',
-      failureFlash:true,
-      successFlash:true
+      failureFlash: true,
+      successFlash: true
     }),(req,res) => {
         req.session.save(() => {
         res.redirect(`/`);

@@ -3,15 +3,18 @@ const Sequelize = require('sequelize');
 class Search extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
+      no: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+      },
       id: {
-        type: Sequelize.STRING(30),    // type : 자료형
-        allowNull: false,              // allowNull: NULL이어도 되니?
-        unique: true,                  // 고유값 여부 
-        primaryKey: true,
+        type: Sequelize.STRING(30)    // type : 자료형              
       },
       search_result: {
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: false,              // allowNull: NULL이어도 되니?
       },
 
       created_at: {
