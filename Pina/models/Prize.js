@@ -1,70 +1,74 @@
-const { sequelize } = require(".")
+const Sequelize = require('sequelize');
 
-module.exports = (Sequelize, DataTypes) => {
-    return Sequelize.define('prize', {
-
+class Prize extends Sequelize.Model {
+  static init(sequelize) {
+    return super.init({
       id: {
-        type: DataTypes.STRING(50),    // type : 자료형
+        type: Sequelize.STRING(50),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니?
         unique: true,                  // 고유값 여부 
         primaryKey: true,
       },
       price_id: {
-        type: DataTypes.STRING(50),
+        type: Sequelize.STRING(50),
         allowNull: false,
         unique: true, 
       },
       price_picture: {
-        type: DataTypes.STRING(100),
+        type: Sequelize.STRING(100),
         allowNull: true,
       },
       title: {
-        type: DataTypes.STRING(100),    // type : 자료형
+        type: Sequelize.STRING(100),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니        
       },
       litle_title: {
-        type: DataTypes.STRING(100),         
+        type: Sequelize.STRING(100),         
       },
       flower_name: {
-        type: DataTypes.STRING(60),    
+        type: Sequelize.STRING(60),    
         allowNull: false,                 
       },
       comment: {
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
         allowNull: false
       },
       color: {
-        type: DataTypes.STRING(30),        
+        type: Sequelize.STRING(30),        
       },
       discount: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED,
       },
       flower_price: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false
       },
       deliver_price: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false
       },
       Size: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false
       },
       Grade: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED,
       },
 
       create_at: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.literal('now()') // 회원이 생길 때 자동으로 날짜가 등록이 됨
+        defaultValue: Sequelize.NOW // 회원이 생길 때 자동으로 날짜가 등록이 됨
       },
-    },
-     {
-      timestamps: false,  // 생성일을 Sequelize가 자동으로 생성하지 말라는 옵션 
-      underscored: true,   // Snake Case를 권장한다는 옵션
-      charset: 'utf8',
-      collate: 'utf8_general_ci',
-    })
+    }, {
+        sequelize,
+        timestamps: false,  // 생성일을 Sequelize가 자동으로 생성하지 말라는 옵션 
+        underscored: true,   // Snake Case를 권장한다는 옵션
+        charset: 'utf8',
+        collate: 'utf8_general_ci',
+    });
   }
+    static associate(db) {}
+  };
+
+  module.exports = Prize;

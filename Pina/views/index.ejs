@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/slide.css">
-    <script src="/js/main.js"></script>
-    <script src="/js/slide.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/slide.css">
+    <script src="../js/main.js"></script>
+        <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Floword</title>
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
 </head>
@@ -19,10 +23,10 @@
         <div class="logo">
             <!-- <i class="fas fa-seedling"></i>
             <span class="title">floword</span> -->
-            <img src="/image/logo.png" class="logo_img">
+            <img src="../image/logo.png" class="logo_img">
         </div>
         <div class="address">
-            <button onclick="location.href='/address'"><i class="fas fa-map-marker-alt"></i><span>주소를 입력해주세요</span></button>
+            <button onclick="location.href='address.html'"><i class="fas fa-map-marker-alt"></i><span>주소를 입력해주세요</span></button>
         </div>
         <div class="basket">
             <button><i class="fas fa-shopping-basket"></i></button>
@@ -30,47 +34,23 @@
     </header>
     <!-- advertising photo -->
     <section class="advertising">
-    <!--image slider start-->
-    <div class="slider">
-        <div class="slides">
-            <!--radio buttons start-->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <!--radio buttons end-->
-            <!--slide images start-->
-            <div class="slide first">
-            <img src="/image/핑크튤립.png" />
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../image/핑크튤립.png"></div>
+                <div class="swiper-slide"><img src="../image/프리지아.png"></div>
+                <div class="swiper-slide"><img src="../image/투톤튤립.png"></div>
+                <div class="swiper-slide"><img src="../image/핑크튤립.png"></div>
             </div>
-            <div class="slide">
-            <img src="/image/프리지아.png" />
-            </div>
-            <div class="slide">
-            <img src="/image/투톤튤립.png" />
-            </div>
-            <div class="slide">
-            <img src="/image/핑크튤립.png" />
-            </div>
-            <!--slide images end-->
-            
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-            <label for="radio1" class="manual-btn" onclick="label_click(1);"></label>
-            <label for="radio2" class="manual-btn" onclick="label_click(2);"></label>
-            <label for="radio3" class="manual-btn" onclick="label_click(3);"></label>
-            <label for="radio4" class="manual-btn" onclick="label_click(4);"></label>
-            </div>
-            <!--manual navigation end-->
-            <!-- search bar above photo -->
-            <div class="search_bar">
-               <button class="search_btn sunflower" onclick="location.href='/search'">
-                    <i class="fas fa-search"></i>검색어를 입력하세요
-                </button>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
-      </div>
-      <!--image slider end-->
+        <script src="/js/slide.js"></script>
+        <!-- search bar above photo -->
+        <div class="search_bar">
+            <button class="search_btn sunflower" onclick="location.href='search.html'">
+                <i class="fas fa-search"></i>검색어를 입력하세요
+            </button>
+        </div>
     </section>
     <!-- category -->
     <section class="category">
@@ -120,15 +100,39 @@
             <li><button><span>30대</span></button></li>
             <li><button><span>40대</span></button></li>
         </div>
-        <div class="product">
-            <button class="btn" onclick="changePhoto(0)"><i class="fas fa-chevron-left"></i></button>
-            <div>
-                <div><img src="/image/프리지아.png" id="keyword_product"/></div>
-                <div class="txt_keword"><span>키워드</span></div>   
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../image/핑크튤립.png">
+                        <span>키워드</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../image/핑크튤립.png">
+                        <span>키워드</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../image/핑크튤립.png">
+                        <span>키워드</span>
+                    </div>
+                </div>
             </div>
-            <button class="btn" onclick="changePhoto(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-            
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+        </script>
     </section>
     <!-- bottom menu -->
     <section class="bottom_menu">
@@ -160,6 +164,12 @@
             <button onclick="location.href='/mypage'">
                 <i class="fas fa-user"></i>
                 <p class="sunflower bottom_txt">정보</p>
+            </button>
+        </li>
+        <li>
+            <button onclick="location.href='/prizetest'">
+                <i class="fas fa-user"></i>
+                <p class="sunflower bottom_txt">관리자메뉴</p>
             </button>
         </li>
     </section>

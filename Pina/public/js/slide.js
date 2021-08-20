@@ -1,12 +1,13 @@
-var counter = 1;
-setInterval(function(){
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if(counter > 4){
-    counter = 1;
-  }
-}, 5000);
-
-function label_click(num) {
-  counter = num;
-}
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 0,
+  speed: 1000,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

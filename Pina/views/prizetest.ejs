@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/address.css">
+    <title>set address</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+</header>
+<!-- prize 생산 데이터 즉시입력-->
+<body>
+  <section>
+    <h1>상품입력 임시 페이지</h1>
+  </section>
+  <section>
+    <form name="prizetest" action='/prizetest_process' method="post" enctype="multipart/form-data">
+      id<br>
+      <input type="text" name="id">
+      <br>
+      price_id<br> 
+      <input type="text" name="price_id">
+      <br>
+      price_picture<br> 
+      <input type="file" name="price_picture">
+      <br>
+      title<br>
+      <input type="text" name="title">
+      <br>
+      litle_title<br>
+      <input type="text" name="litle_title">
+      <br>
+      flower_name<br>
+      <input type="text" name="flower_name">
+      <br>
+      comment<br>
+      <input type="text" name="comment">
+      <br>
+      color<br>
+      <input type="text" name="color">
+      <br>
+      discount<br>
+      <input type="text" name="discount">
+      <br>
+      flower_price<br>
+      <input type="text" name="flower_price">
+      <br>
+      deliver_price<br>
+      <input type="text" name="deliver_price">
+      <br>
+      Size<br>
+      <input type="text" name="size">
+      <br>
+      Grade<br>
+      <input type="text" name="grade">
+      <br><br>
+      <input type="submit" name="" value="제출" >
+    </form>
+  </section>
+</body>
+</html>

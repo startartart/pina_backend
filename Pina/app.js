@@ -7,15 +7,15 @@ var parseurl = require('parseurl')
 var session = require('express-session')
 var FileStore = require('session-file-store')(session);
 const bodyParser = require('body-parser');
-var models = require('./models');
+var models = require('./models/index.js');
 var app = express();
 var flash = require('connect-flash');
 models.sequelize.sync();
 
 // view engine setup
-app.engine('html',require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
+app.engine('html',require('ejs').renderFile);
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(logger('dev'));
 app.use(express.json());

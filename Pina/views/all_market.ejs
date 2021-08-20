@@ -85,54 +85,16 @@
 </section>
 <!-- markets -->
 <section class="markets">
+    <% for(let prize of prizes) { %>
     <div class="market">
         <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
+            <div class="market_name"><%= prize.price_id%></div>
+            <div class="market_age">#<%= prize.Grade%>대</div>
+            <div class="market_tag">#<%= prize.color%> #<%= prize.litle_title%> #<%= prize.flower_name%></div>
         </div>
-        <div class="market_img"><img src="../image/핑크튤립.png"></div>
+        <div class="market_img"><img src="../image/<%= prize.price_picture %>"></div>
     </div>
-    <div class="market">
-        <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
-        </div>
-        <div class="market_img"><img src="../image/프리지아.png"></div>
-    </div>
-    <div class="market">
-        <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
-        </div>
-        <div class="market_img"><img src="../image/핑크튤립.png"></div>
-    </div>
-    <div class="market">
-        <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
-        </div>
-        <div class="market_img"><img src="../image/프리지아.png"></div>
-    </div>
-    <div class="market">
-        <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
-        </div>
-        <div class="market_img"><img src="/image/핑크튤립.png"></div>
-    </div>
-    <div class="market">
-        <div>
-            <div class="market_name">플라워드</div>
-            <div class="market_age">#20대 #30대</div>
-            <div class="market_tag">#꽃다발 #한송이</div>
-        </div>
-        <div class="market_img"><img src="../image/프리지아.png"></div>
-    </div>
+    <% } %>
 </section>
 <!-- bottom menu -->
 <section class="bottom_menu">
