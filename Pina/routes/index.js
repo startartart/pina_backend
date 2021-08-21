@@ -5,7 +5,17 @@ var fs = require('fs');
 const models = require('../models');
 var app = express();
 const multer = require('multer');
-const upload = multer({dest: 'pictures/'});
+const path = require('path');
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: function(req, file, cb){
+      cb(null, 'public/pictures/');
+    },
+    filename: function(req, file, cb){
+      cb(null, new Date().valueOf() + path.extname(file.originalname));
+    }
+  }),
+});
 
 // var Search = require('../models/search');
 // var User = require('../models/User');
@@ -54,7 +64,6 @@ router.get('/address', function(req,res,next){
 
 router.get('/all_market', function(req,res,next){
   models.Prize.findAll().then( result => {
-    console.log(result);
     res.render('all_market', {
       prizes: result
     })
@@ -94,9 +103,10 @@ router.get('/prizetest', function(req,res,next){
 });
 
 router.post('/prizetest_process', upload.single('price_picture'), function(req,res,next){
+  console.log(req.file);
   var id = req.body.id;
   var price_id = req.body.price_id;
-  var price_picture = req.file;
+  var price_picture = req.file.filename;
   var title = req.body.title;
   var litle_title = req.body.litle_title;
   var flower_name = req.body.flower_name;

@@ -10,6 +10,8 @@ const bodyParser = require('body-parser');
 var models = require('./models/index.js');
 var app = express();
 var flash = require('connect-flash');
+
+
 models.sequelize.sync();
 
 // view engine setup
