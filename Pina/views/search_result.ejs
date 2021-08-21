@@ -40,50 +40,15 @@
     </section>
     <section class="products">
         <!-- <div class="box_product"> -->
+            <% for(let prize of search_flower) { %>
             <button onclick="location.href='/product_info'" class="box_product2">
-                <div><img src="../image/프리지아.png"></div>
+                <div><img src="../pictures/<%= prize.price_picture %>"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
+                <div class="products_market"><%= prize.price_id %></div>
+                <div class="products_info"><%= prize.comment %></div>
+                <div class="products_price"><%= prize.flower_price%>원</div>
             </button>
-            <button class="box_product2">
-                <div><img src="../image/핑크튤립.png"></div>
-                <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
-            </button>
-        <!-- </div> -->
-        <!-- <div class="box_product"> -->
-            <button class="box_product2">
-                <div><img src="../image/투톤튤립.png"></div>
-                <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
-            </button>
-            <button class="box_product2">
-                <div><img src="../image/프리지아.png"></div>
-                <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
-            </button>
-            <button class="box_product2">
-                <div><img src="../image/핑크튤립.png"></div>
-                <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
-            </button>
-            <button class="box_product2">
-                <div><img src="../image/투톤튤립.png"></div>
-                <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market">마켓이름</div>
-                <div class="products_info">상품한줄소개상품한줄소개</div>
-                <div class="products_price">20,000원</div>
-            </button>
+            <% } %>
         <!-- </div> -->
     </section>
     <!-- bottom menu -->

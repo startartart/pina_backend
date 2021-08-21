@@ -17,10 +17,6 @@ const upload = multer({
   }),
 });
 
-// var Search = require('../models/search');
-// var User = require('../models/User');
-// var users = require('./users');
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -35,7 +31,6 @@ router.get('/search', function(req,res,next){
 });
 
 router.get('/search_result', function(req,res,next){
-  res.render('search_result');
 });
 
 router.post('/search_result', function(req,res,next){
@@ -50,8 +45,14 @@ router.post('/search_result', function(req,res,next){
       id: result.id,
       search_result: search_word
     })
+  });
+  models.Prize.findAll({
+    where: {title: search_word}
+  }).then(result2 => {
+    res.render('search_result', {
+      search_flower: result2
+    })
   })
-  res.render('search_result');
 });
 
 router.get('/address/map', function(req,res,next){
