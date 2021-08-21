@@ -6,6 +6,10 @@ const models = require('../models');
 var app = express();
 const multer = require('multer');
 const path = require('path');
+
+var url = require('url');
+
+// prize_picture upload pictures
 const upload = multer({
   storage: multer.diskStorage({
     destination: function(req, file, cb){
@@ -80,7 +84,17 @@ router.get('/products', function(req,res,next){
 });
 
 router.get('/product_info', function(req,res,next){
-  res.render('product_info');
+  var queryData = url.parse(req.url, true).query;
+  console.log(queryData.flower);
+  models.Prize.findAll({
+    where: {
+      id: queryData.flower
+    }
+  }).then( result => {
+    res.render('product_info', {
+      product: result
+    });
+  })
 });
 
 router.get('/mypage', function(req,res,next){

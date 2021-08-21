@@ -21,10 +21,11 @@
         <div class="title">상품정보</div>
         <div class="empty"></div>
     </header>
+    <% for(let prize of product) { %>
     <div class="swiper-container mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="/image/프리지아.png">
+                <img src="../pictures/<%= prize.price_picture %>">
             </div>
             <div class="swiper-slide">
                 <img src="/image/프리지아.png">
@@ -38,10 +39,11 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/js/product_info.js"></script>
     <section class="product_info">
-        <div class="product_title">상품명 : 프리지아 꽃</div>
-        <div class="product_price">가격 : 20,000원</div>
-        <div class="product_delivery">배달비: 3,000원</div>
+        <div class="product_title">상품명 : <%= prize.price_id %></div>
+        <div class="product_price">가격 : <%= prize.flower_price %>원</div>
+        <div class="product_delivery">배달비: <%= prize.deliver_price %>원</div>
     </section>
+    
     <section class="product_bar">
         <!-- Swiper -->
         <div class="swiper-container mySwiper2">
@@ -49,9 +51,9 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <p class="product_word2 padding">
-                        "당신의 새 출발을 응원합니다"<br><br>
-                        프리지아의 꽃말입니다.<br><br>
-                        <img src="/image/프리지아.png"><br><br>
+                        "<%= prize.comment %>"<br><br>
+                        <%= prize.title %>의 꽃말입니다.<br><br>
+                        <img src="../pictures/<%= prize.price_picture %>"><br><br>
                         상품 사이즈<br><br>
                         가로: 20cm<br><br>
                         세로: 50cm<br><br>
@@ -79,6 +81,7 @@
         });
         </script>
     </section>
+    <% } %>
     <!-- bottom basket menu -->
     <section class="bottom_menu_basket">
         <div class="go_buy">

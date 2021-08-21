@@ -41,7 +41,7 @@
     <section class="products">
         <!-- <div class="box_product"> -->
             <% for(let prize of search_flower) { %>
-            <button onclick="location.href='/product_info'" class="box_product2">
+            <button onclick="location.href='/product_info?flower=<%= prize.id %>'" class="box_product2">
                 <div><img src="../pictures/<%= prize.price_picture %>"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
                 <div class="products_market"><%= prize.price_id %></div>
