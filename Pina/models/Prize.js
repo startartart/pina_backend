@@ -3,11 +3,15 @@ const Sequelize = require('sequelize');
 class Prize extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
+      no: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+      },
       id: {
         type: Sequelize.STRING(50),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니?
-        unique: true,                  // 고유값 여부 
-        primaryKey: true,
       },
       price_id: {
         type: Sequelize.STRING(50),
@@ -54,7 +58,6 @@ class Prize extends Sequelize.Model {
       Grade: {
         type: Sequelize.INTEGER.UNSIGNED,
       },
-
       create_at: {
         type: Sequelize.DATE,
         allowNull: false,

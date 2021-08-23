@@ -44,8 +44,8 @@
             <button onclick="location.href='/product_info?flower=<%= prize.id %>'" class="box_product2">
                 <div><img src="../pictures/<%= prize.price_picture %>"></div>
                 <div class="products_location"><i class="fas fa-map-marker-alt"></i>2.3km</div>
-                <div class="products_market"><%= prize.price_id %></div>
-                <div class="products_info"><%= prize.comment %></div>
+                <div class="products_market"><%= prize.title %></div>
+                <div class="products_info"><%= prize.litle_title %></div>
                 <div class="products_price"><%= prize.flower_price%>원</div>
             </button>
             <% } %>

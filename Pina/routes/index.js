@@ -117,11 +117,12 @@ router.get('/prizetest', function(req,res,next){
   res.render('prizetest');
 });
 
-router.post('/prizetest_process', upload.single('price_picture'), function(req,res,next){
-  console.log(req.file);
+router.post('/prizetest_process', upload.array('price_picture[]', 4), function(req,res,next){
+  console.log(req.files);
+  console.log(req.files[0].filename)
   var id = req.body.id;
   var price_id = req.body.price_id;
-  var price_picture = req.file.filename;
+  var price_picture = req.files[0].filename;
   var title = req.body.title;
   var litle_title = req.body.litle_title;
   var flower_name = req.body.flower_name;
