@@ -1,0 +1,133 @@
+.product_info {
+  padding: var(--padding);
+  font-family: none;
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.product_info_box {
+  display: flex;
+  padding: var(--padding);
+  justify-content: space-between;
+}
+
+.product_info_box .product_img {
+  width: 150px;
+  height: 150px;
+}
+
+.product_info_box .product_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+.product_info_box .market_name_gray {
+  color: var(--grey-dark-color);
+  margin-bottom: var(--padding);
+}
+
+.product_info_box .product_name {
+  margin-bottom: var(--padding);
+}
+
+.product_info_box .quantity {
+  margin-bottom: var(--padding);
+  border: 1px solid var(--grey-dark-color);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.product_info_box .quantity button {
+  padding: calc(var(--padding) / 2);
+  margin: 0 2px;
+}
+
+.product_info .product_price {
+  font-weight: bold;
+}
+
+.product_info .close_btn {
+  padding: 0 var(--padding) var(--padding) var(--padding);
+}
+
+.estimated_price {
+  padding: var(--padding);
+  font-family: none;
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.estimated_price_box {
+  display: flex;
+  padding: var(--padding);
+  justify-content: space-between;
+}
+
+.estimated_price_box .product_price,
+.estimated_price_box .shipping_fee,
+.estimated_price_box .discount {
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.estimated_price_box .total_estimated_price {
+  margin: auto 0;
+}
+
+.estimated_price_box .pink_text {
+  color: var(--concept-dark-color);
+  font-weight: bold;
+}
+
+.more_shopping {
+  font-family: none;
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.more_shopping .more_shopping_btn {
+  padding: var(--padding);
+  width: 100%;
+}
+
+.more_shopping .more_shopping_btn i {
+  color: var(--concept-dark-color);
+  margin-right: var(--padding);
+}
+
+.empty_height {
+  height: 150px;
+}
+
+.point {
+  padding: var(--padding);
+  border-top: 10px solid var(--gray-light-light-color);
+  font-family: none;
+}
+
+.point .point_contents {
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.point_box {
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_menu_buy {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  background-color: var(--white-color);
+  border-top: 1px solid var(--grey-light-color);
+}
+
+.bottom_menu_buy .go_payment > button {
+  background-color: var(--concept-dark-color);
+  padding: var(--padding) 80px var(--padding) 80px;
+  color: white;
+  border-radius: 5px;
+  font-size: var(--font-medium);
+}

@@ -6,9 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/product_info.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.2/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../css/product_info.css">
     <title>Floword</title>
     <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
 </head>
@@ -64,7 +66,7 @@
             </div>
         </div>
         <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@6.8.2/swiper-bundle.min.js"></script>
 
         <!-- Initialize Swiper -->
         <script>
@@ -85,15 +87,36 @@
     <!-- bottom basket menu -->
     <section class="bottom_menu_basket">
         <div class="go_buy">
-            <button id="toastButton" class="sunflower">
-                장바구니
-            </button>
+            <button id="openModalPop">구매하기</button>
+        </div>
+        <div id= "modal">
+            <button id="close_button"></button>
+        </div>
+            <div id = "banner_online">
+                <div class="pop_content">
+                    <select>
+                        <option>옵션1 선택하기</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                    <select>
+                        <option>옵션2 선택하기</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+                <div id="complete_button" class="complete">
+                    <button>장바구니 담기</button>
+                </div>
+            </div>
             <div id="toast">장바구니에 상품을 담았습니다!</div>
             <script>
                 const toast = document.getElementById('toast');  // id가 toast인 요소 div
                 let isToastShown = false;
                 // id가 toastButton인 요소를 클릭하면 아래 함수가 호출됨
-                document.getElementById('toastButton').addEventListener('click', function () {
+                document.getElementById('complete_button').addEventListener('click', function () {
                     if (isToastShown) return;   // 토스트 메시지가 띄어져 있다면 함수를 끝냄
                     isToastShown = true;
                     toast.classList.add('show');    // show라는 클래스를 추가해서 토스트 메시지를 띄우는 애니메이션을 발동시킴
@@ -103,7 +126,6 @@
                         isToastShown = false;
                     }, 2700);
                 });
-          </script>
-        </div>
+            </script>
     </section>
 </body>

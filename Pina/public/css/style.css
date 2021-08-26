@@ -30,13 +30,13 @@
 }
 
 body {
-  font-family: Sunflower;
+  /* font-family: Sunflower; */
   padding-bottom: 110px;
 }
 
 /* Font */
 .sunflower {
-  font-family: Sunflower;
+  /* font-family: Sunflower; */
 }
 
 .padding {
@@ -79,6 +79,43 @@ input {
 
 .title {
   font-family: none;
+  font-weight: bold;
+}
+
+select {
+  background-color: var(--gray-light-light-color);
+  padding: var(--padding);
+  border: 1px solid #999999;
+  color: gray;
+  border-radius: 5px;
+  display: flex;
+  margin: var(--padding) 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/image/angle-down-solid.svg") no-repeat 95% 50%;
+  width: 100%;
+  text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.right {
+  text-align: right;
+}
+
+.pink_text {
+  color: var(--concept-dark-color);
   font-weight: bold;
 }
 

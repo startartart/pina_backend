@@ -5,3 +5,20 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+$(document).ready(function() {
+    $("#openModalPop").click(function() {
+        $("#banner_online").slideDown();
+        $("#modal").show();
+    });
+
+    $("#close_button").click(function(){
+        $("#banner_online").slideUp();
+        $("#modal").hide();
+    });
+
+    $("#complete_button").click(function(){
+        $("#banner_online").slideUp();
+        $("#modal").hide();
+    });
+});

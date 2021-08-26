@@ -1,0 +1,43 @@
+.address_info,
+.refund_account,
+.total_price,
+.payment_method {
+  padding: var(--padding);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.address_info_head,
+.refund_account_head,
+.total_price_head,
+.payment_method_head {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--padding) 0;
+}
+
+.name_phonenum,
+.address_head,
+.address_detail {
+  padding: 1px var(--padding);
+}
+
+.option,
+.account {
+  padding: 0 var(--padding);
+}
+
+.payment_method_btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.payment_method_btns .payment_method_btn {
+  border: 1px solid var(--grey-light-color);
+  padding: calc(var(--padding) / 2) var(--padding);
+  border-radius: 5px;
+}
+
+.payment_method_btns .current {
+  color: white;
+  background-color: var(--concept-dark-color);
+}

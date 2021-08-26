@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/basket.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Floword</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<!-- Header -->
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <div class="title">장바구니</div>
+    <div class="empty"></div>
+</header>
+<body>
+    <section class="product_info">
+        <div class="market_name">플라워즈 마켓</div>
+        <div class="product_info_box">
+            <div class="product_img"><img src="/image/프리지아.png"></div>
+            <div>
+                <div class="market_name_gray">플라워즈</div>
+                <div class="product_name">프리지아 조화</div>
+                <div class="quantity">
+                    <button><i class="fas fa-minus"></i></button>
+                    1
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="product_price">19,800원</div>
+            </div>
+            <div>
+                <button class="close_btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="estimated_price">
+        <div class="estimated_price_box">
+            <div>
+                <div class="product_price">상품 금액 19,800원</div>
+                <div class="shipping_fee">배송비 2,000원</div>
+                <div class="discount">할인 0원</div>
+            </div>
+            <div class="total_estimated_price">결제 예상 <span class="pink_text">21,800원</span></div>
+        </div>
+    </section>
+    <section class="more_shopping">
+        <button class="more_shopping_btn">
+            <i class="fas fa-plus"></i>더 담으러 가기
+        </button>
+    </section>
+    <div class="empty_height"></div>
+    <section class="point">
+        <div class="point_box">
+            <div>
+                <div class="point_contents">총 1개 주문금액</div>
+                <div class="point_contents">예상 적립포인트</div>
+            </div>
+            <div>
+                <div class="point_contents bold right">21,800원</div>
+                <div class="point_contents bold right">21원</div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom_menu_buy">
+        <div class="go_payment">
+            <button onclick="location.href='/payment'" class="bold">21,800원 결제하기</button>
+        </div>
+    </section>
+</body>

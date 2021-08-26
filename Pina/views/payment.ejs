@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/payment.css">
+    <title>Floword</title>
+    <script src="https://kit.fontawesome.com/a5dc1e6b68.js" crossorigin="anonymous"></script>
+</head>
+<!-- Header -->
+<header>
+    <div class="prev_btn">
+        <button onclick="history.go(-1)"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <div class="title">주문/결제</div>
+    <div class="empty"></div>
+</header>
+<body>
+    <section class="address_info">
+        <div class="address_info_head">
+            <div class="bold">배송지 정보</div>
+            <div class="pink_text">변경하기</div>
+        </div>
+        <div class="name_phonenum">홍길동 010-1234-5678</div>
+        <div class="address_head">대한민국 서울시 구로구 가산동</div>
+        <div class="address_detail">플라워드빌라 H동 1004호</div>
+        <div class="option">
+            <select>
+                <option>배송 시 요청사항을 선택해주세요.</option>
+                <option>문앞에 두고 벨 눌러주세요</option>
+                <option>벨 누르지 말고 노크해주세요</option>
+                <option>도착하기 전에 전화주세요</option>
+                <option>요청사항 없음</option>
+                <option>직접입력</option>
+                <option></option>
+            </select>
+        </div>
+    </section>
+    <section class="refund_account">
+        <div class="refund_account_head">
+            <div class="bold">환불 계좌</div>
+            <div class="pink_text">변경하기</div>
+        </div>
+        <div class="account">홍길동 | 농협 1234567891011</div>
+    </section>
+    <section class="total_price">
+        <div class="total_price_head">
+            <div class="bold">총 결제금액</div>
+            <div class="pink_text">21,800원</div>
+        </div>
+    </section>
+    <section class="payment_method">
+        <div class="payment_method_head">
+            <div class="bold">결제방법</div>
+        </div>
+        <div class="payment_method_btns">
+            <button class="payment_method_btn current">간편결제</button>
+            <button class="payment_method_btn">카드결제</button>
+            <button class="payment_method_btn">휴대폰결제</button>
+            <button class="payment_method_btn">무통장입금</button>
+        </div>
+    </section>
+</body>

@@ -30,6 +30,14 @@ router.get('/address', function(req,res,next){
   res.render('address_ser');
 });
 
+router.get('/basket', function(req,res,next){
+  res.render('basket');
+});
+
+router.get('/payment', function(req,res,next){
+  res.render('payment');
+});
+
 router.get('/search', function(req,res,next){
   res.render('search');
 });
@@ -119,7 +127,6 @@ router.get('/prizetest', function(req,res,next){
 
 router.post('/prizetest_process', upload.array('price_picture[]', 4), function(req,res,next){
   console.log(req.files);
-  console.log(req.files[0].filename)
   var id = req.body.id;
   var price_id = req.body.price_id;
   var price_picture = req.files[0].filename;
