@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-class User extends Sequelize.Model {
+class user extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
       id: {
@@ -16,9 +16,7 @@ class User extends Sequelize.Model {
       name: {
         type: Sequelize.STRING(30),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니?
-        unique: true,                  // 고유값 여부 
       },
-
       age: {
         type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,
@@ -59,4 +57,4 @@ class User extends Sequelize.Model {
   static associate(db) {}
 };
 
-module.exports = User;
+module.exports = user;

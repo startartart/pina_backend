@@ -7,10 +7,10 @@ var parseurl = require('parseurl')
 var session = require('express-session')
 var FileStore = require('session-file-store')(session);
 const bodyParser = require('body-parser');
-var models = require('./models/index.js');
+const models = require('./models/index')
+
 var app = express();
 var flash = require('connect-flash');
-
 models.sequelize.sync();
 
 // view engine setup
@@ -30,8 +30,6 @@ app.use(session({
   store:new FileStore()
 }));
 app.use(flash());
-const {User} = require('./models');
-
 
 var passport = require('./passport')(app);
 var indexRouter = require('./routes/index');

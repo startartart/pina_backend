@@ -1,10 +1,19 @@
 # pina_backend
 
-## ~8.21(토) 업데이트 내용
+## ~8.21(토) 
     html -> ejs file 변경 (database로부터 파일 읽기)
     sequelize 문법을 사용한 mysql databases table
     database : pina_db
     table : models 내에 존재하는 table (address, comment, index, mypage, prize, search, user)
+
+## ~8.30(월)
+    table : address_code, address, cart, comment, coupon, florist, flower, mypage, price, prize, search, user
+    database 관계 수정
+![Alt text](./img/modeltables.png)
+    
+
+
+
 ### 1. __admin menu__ : prize table에 정보를 입력할 수 있습니다.
 
 <img src="./img/admin1.png" width="300px" height="400px"></img>

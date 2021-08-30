@@ -9,7 +9,7 @@ class Search extends Sequelize.Model {
         allowNull: false,
         primaryKey: true
       },
-      id: {
+      who: {
         type: Sequelize.STRING(30)    // type : 자료형              
       },
       search_result: {

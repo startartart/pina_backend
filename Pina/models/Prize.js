@@ -3,60 +3,35 @@ const Sequelize = require('sequelize');
 class Prize extends Sequelize.Model {
   static init(sequelize) {
     return super.init({
-      no: {
+      prizecreat_no: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
       },
-      id: {
+      prize_id: {
         type: Sequelize.STRING(50),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니?
       },
-      price_id: {
-        type: Sequelize.STRING(50),
-        allowNull: false,
-        unique: true, 
-      },
-      price_picture: {
+      prize_picture: {
         type: Sequelize.STRING(100),
         allowNull: true,
       },
-      title: {
+      prize_kind: {
         type: Sequelize.STRING(100),    // type : 자료형
         allowNull: false,              // allowNull: NULL이어도 되니        
       },
-      litle_title: {
-        type: Sequelize.STRING(100),         
+      prize_width: {
+        type: Sequelize.INTEGER.UNSIGNED
       },
-      flower_name: {
-        type: Sequelize.STRING(60),    
-        allowNull: false,                 
-      },
-      comment: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      color: {
-        type: Sequelize.STRING(30),        
+      prize_length: {
+        type: Sequelize.INTEGER.UNSIGNED
       },
       discount: {
-        type: Sequelize.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER.UNSIGNED
       },
-      flower_price: {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false
-      },
-      deliver_price: {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false
-      },
-      Size: {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false
-      },
-      Grade: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      price: {
+        type: Sequelize.INTEGER.UNSIGNED
       },
       create_at: {
         type: Sequelize.DATE,
@@ -71,7 +46,7 @@ class Prize extends Sequelize.Model {
         collate: 'utf8_general_ci',
     });
   }
-    static associate(db) {}
+  static associate(db) {}
   };
 
   module.exports = Prize;
